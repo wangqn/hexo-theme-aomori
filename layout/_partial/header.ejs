@@ -3,10 +3,10 @@
     <div class="header-type">
       <% if (theme.logo){ %>
       <div class="avatar avatar-sm">
-        <img src="<%= theme.logo %>" alt="<%= config.author %>">
+        <img src="<%= url_for(theme.logo) %>" alt="<%= config.author %>">
       </div>
       <% } %>
-      <a href="/"><%= config.title %></a>
+      <a href="<%- url_for() %>"><%= config.title %></a>
     </div>
     <div class="header-menu">
       <% for (var i in theme.menu){ %>
